@@ -47,7 +47,7 @@ public class PrimeGenerator { //class
 	}
 	
 	public static void main(String[] args) {  //main method
-		PrimeGenerator gen = new PrimeGenerator(1, 7); //Create one instance
+		PrimeGenerator gen = new PrimeGenerator(3, 15); //Create one instance
 
 		gen.generatePrimes(); // call generate prime method and amend the linked list
 		LinkedList<Long> primes = gen.getPrimes(); //get the prepared linked list
