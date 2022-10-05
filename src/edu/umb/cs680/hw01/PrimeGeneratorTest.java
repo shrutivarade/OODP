@@ -32,8 +32,9 @@ public class PrimeGeneratorTest {
     public void convertingLinkedListToArray() {
         pg = new PrimeGenerator(1, 15);
         pg.generatePrimes();
-        Long[] expectedPrimes= {2L, 3L, 5L, 7L, 11L, 13L};
-        assertArrayEquals( expectedPrimes, pg.getPrimes().toArray() );
+
+        Long[] arr= {2L, 3L, 5L, 7L, 11L, 13L};
+        assertArrayEquals( arr, pg.getPrimes().toArray() );
 
     }
 
