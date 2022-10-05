@@ -1,8 +1,7 @@
 package edu.umb.cs680.hw01;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 
 import java.util.LinkedList;
 
