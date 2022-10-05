@@ -85,17 +85,4 @@ public class PrimeGeneratorTest {
         assertEquals(97,pg.getPrimes().get(24));
     }
 
-
-    /*@Test
-    public void isEven(){
-        PrimeGenerator pg = new PrimeGenerator(1,5);
-        for(int i=1; i<=5; i+=2){
-            assertFalse(pg.isEven(i));
-
-        }
-        for(int j=2; j<=5; j+=2){
-            assertTrue(pg.isEven(j));
-        }
-    }*/
-
 }
