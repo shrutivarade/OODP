@@ -12,17 +12,33 @@ public class PrimeGeneratorTest {
     LinkedList<Long> expected = new LinkedList<Long>();;
 
     @Test
-    public void testConstructorForNegativeValue() {
-        try{
-            pg = new PrimeGenerator(-1,7);
-        }
-        catch(RuntimeException e) {
-            assertEquals(e.getMessage(), "Wrong input values: from=-1 to=7");
-        }
+    public void noOfPrimesFrom1to10() {
+
+        pg = new PrimeGenerator(1,10);
+        pg.generatePrimes();
+        assertEquals(4,pg.getPrimes().size());
     }
 
     @Test
-    public void listOfPrimeNumbers1to10() {
+    public void noOfPrimesFrom7to17() {
+
+        pg = new PrimeGenerator(7,17);
+        pg.generatePrimes();
+
+        assertEquals(7-3,pg.getPrimes().size());
+    }
+
+    @Test
+    public void convertingLinkedListToArray() {
+        pg = new PrimeGenerator(1, 15);
+        pg.generatePrimes();
+        Long[] expectedPrimes= {2L, 3L, 5L, 7L, 11L, 13L};
+        assertArrayEquals( expectedPrimes, pg.getPrimes().toArray() );
+
+    }
+
+    @Test
+    public void listOfPrimeNumbers1to10Using_AddFunction() {
         pg = new PrimeGenerator(1,10);
         pg.generatePrimes();
 
@@ -38,7 +54,7 @@ public class PrimeGeneratorTest {
     }
 
     @Test
-    public void listOfPrimeNumbers3to15() {
+    public void listOfPrimeNumbers3to15Using_GetFunction() {
         pg = new PrimeGenerator(3,15);
         pg.generatePrimes();
 
@@ -51,20 +67,24 @@ public class PrimeGeneratorTest {
     }
 
     @Test
-    public void noOfPrimeFrom1to10() {
-
-        pg = new PrimeGenerator(1,10);
-        pg.generatePrimes();
-        assertEquals(4,pg.getPrimes().size());
+    public void testConstructorForNegativeValue() {
+        try{
+            pg = new PrimeGenerator(-1,7);
+        }
+        catch(RuntimeException e) {
+            assertEquals(e.getMessage(), "Wrong input values: from=-1 to=7");
+        }
     }
 
     @Test
-    public void noOfPrimeFrom7to17() {
-
-        pg = new PrimeGenerator(7,17);
-        pg.generatePrimes();
-
-        assertEquals(7-3,pg.getPrimes().size());
+    public void testConstructorForInvalidValue() {
+        try{
+            pg = new PrimeGenerator(19,7);
+        }
+        catch(RuntimeException e) {
+            assertEquals(e.getMessage(), "Wrong input values: from=19 to=7");
+        }
     }
+
 
 }
