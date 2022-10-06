@@ -36,7 +36,6 @@ public class CalculatorTest {
 
 //            Assertions.assertThrows(e.getClass(),()->calc.divide(20,0));
 //            Assertions.assertThrows(IllegalArgumentException.class,()->calc.divide(20,0));
-
         }
     }
 }
