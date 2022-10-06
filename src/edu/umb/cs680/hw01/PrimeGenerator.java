@@ -13,6 +13,7 @@ public class PrimeGenerator { //class
 			this.to = to;
 		}else{
 			throw new RuntimeException("Wrong input values: from=" + from + " to=" + to);
+
 		}
 	}
 	

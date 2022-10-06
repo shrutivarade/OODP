@@ -17,6 +17,7 @@ public class PrimeGeneratorTest {
         pg = new PrimeGenerator(1,10);
         pg.generatePrimes();
         assertEquals(4,pg.getPrimes().size());
+
     }
 
     @Test
