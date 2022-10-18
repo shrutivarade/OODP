@@ -13,7 +13,7 @@ class CarTest {
     @Test
     public void verifyCarEqualityWithMakeModelYear(){
         String[] expected = new String[]{"Toyota", "RAV4","2018"};
-        Car actual = new Car("Toyota", "RAV4",2018);
+        Car actual = new Car("Toyota", "RAV4",50,2018,100000);
         assertArrayEquals(expected, carToStringArray(actual));
 
 
