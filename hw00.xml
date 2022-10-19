@@ -54,7 +54,7 @@
 			<classpath refid="classpath" />
 			<testclasses outputdir="test">
 				<fileset dir="${test.bin}">
-					<include name="src/edu/umb/cs680/hw00/*Test.class"/> <!--add src-->
+					<include name="edu/umb/cs680/hw00/*Test.class"/> <!--add src-->
 				</fileset>
 				<listener type="legacy-plain" sendSysOut="true"/>
 				<!--listener type="legacy-brief" sendSysOut="true"/-->
@@ -71,7 +71,7 @@
 	<target name="clean" depends="run">
 		<delete includeemptydirs="true">
 			<fileset dir="${bin}/edu/umb/cs680/hw00" includes="**/*"/>
-			<fileset dir="${test.bin}/src/edu/umb/cs680/hw00" includes="**/*"/> <!--add src-->
+			<fileset dir="${test.bin}/edu/umb/cs680/hw00" includes="**/*"/> <!--add src-->
 		</delete>
 	</target>
 

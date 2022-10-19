@@ -1,12 +1,8 @@
-package src.edu.umb.cs680.hw01;
+package edu.umb.cs680.hw01;
 
-import edu.umb.cs680.hw01.PrimeGenerator;
 import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class PrimeGeneratorTest {

@@ -1,8 +1,7 @@
-package src.edu.umb.cs680.hw00;
+package edu.umb.cs680.hw00;
 
-import edu.umb.cs680.hw00.Calculator;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 
 public class CalculatorTest {
@@ -10,13 +9,13 @@ public class CalculatorTest {
     Calculator calc;
 
     public CalculatorTest() {
-         calc = new Calculator();
+        calc = new Calculator();
     }
 
     @Test
-    public void multiply22by3() {
+    public void multiply2by3() {
         Calculator calc = new Calculator();
-        Assertions.assertEquals(66,calc.multiply(22,3));
+        Assertions.assertEquals(6,calc.multiply(2,3));
     }
 
     @Test
@@ -35,8 +34,7 @@ public class CalculatorTest {
 
             Assertions.assertEquals(e.getMessage(),"division by zero");
 
-            Assertions.assertThrows(e.getClass(),()->calc.divide(20,0));
-
+//            Assertions.assertThrows(e.getClass(),()->calc.divide(20,0));
 //            Assertions.assertThrows(IllegalArgumentException.class,()->calc.divide(20,0));
         }
     }
