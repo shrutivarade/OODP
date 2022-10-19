@@ -1,4 +1,4 @@
-package src.edu.umb.cs680.hw03;
+package edu.umb.cs680.hw03;
 
 import edu.umb.cs680.hw03.Singleton;
 import org.junit.jupiter.api.Test;
@@ -20,6 +20,8 @@ class SingletonTest {
         Singleton s = Singleton.getInstance();
         assertNotNull(s);
     }
+
+
 
 
 

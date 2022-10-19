@@ -14,6 +14,13 @@ public class Singleton {
     }
 
     public static void main(String[] args) {
-        Singleton sng = new Singleton();
+
+        Singleton sng = Singleton.getInstance();
+        System.out.println(sng.hashCode());
+        Singleton sng1 = Singleton.getInstance();
+        System.out.println(sng1.hashCode());
+
+
+
     }
 }
