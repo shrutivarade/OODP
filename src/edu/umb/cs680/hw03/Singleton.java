@@ -11,6 +11,7 @@ public class Singleton {
         if (s_inst == null)
             s_inst = new Singleton();
         return s_inst;
+
     }
 
     public static void main(String[] args) {
