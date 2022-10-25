@@ -8,11 +8,11 @@ class SingletonTest {
 
     @Test
     public void checking_identical_instance() {
-        Singleton s1 = Singleton.getInstance();
-        Singleton s2 = Singleton.getInstance();
+        Singleton inst1 = Singleton.getInstance();
+        Singleton inst2 = Singleton.getInstance();
 
-        assertSame(s1, s2);
-        assertEquals(s1.hashCode(),s2.hashCode());
+        assertSame(inst1, inst2);
+        assertEquals(inst1.hashCode(),inst2.hashCode());
 
     }
 

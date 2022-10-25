@@ -1,25 +1,28 @@
 package edu.umb.cs680.hw03;
 
 public class Singleton {
-    private static Singleton inst = null;
+    private static Singleton instance = null;
 
     private Singleton() {
     }
 
     public static Singleton getInstance()
     {
-        if (inst == null)
-            inst = new Singleton();
-        return inst;
+        if (instance == null)
+            instance = new Singleton();
+        return instance;
 
     }
 
     public static void main(String[] args) {
 
-        Singleton sng = Singleton.getInstance();
-        System.out.println(sng.hashCode());
-        Singleton sng1 = Singleton.getInstance();
-        System.out.println(sng1.hashCode());
+        Singleton inst = Singleton.getInstance();
+        System.out.println(inst.hashCode());
+        System.out.println(inst);
+        Singleton inst1 = Singleton.getInstance();
+        System.out.println(inst1.hashCode());
+        System.out.println(inst1);
+
 
 
 
