@@ -11,20 +11,15 @@ public class Singleton {
         if (instance == null)
             instance = new Singleton();
         return instance;
-
     }
 
     public static void main(String[] args) {
-
         Singleton inst = Singleton.getInstance();
         System.out.println(inst.hashCode());
         System.out.println(inst);
         Singleton inst1 = Singleton.getInstance();
         System.out.println(inst1.hashCode());
         System.out.println(inst1);
-
-
-
 
     }
 }

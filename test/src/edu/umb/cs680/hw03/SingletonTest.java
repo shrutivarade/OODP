@@ -12,6 +12,14 @@ class SingletonTest {
         Singleton inst2 = Singleton.getInstance();
 
         assertSame(inst1, inst2);
+
+    }
+
+    @Test
+    public void checking_logical_instance() {
+        Singleton inst1 = Singleton.getInstance();
+        Singleton inst2 = Singleton.getInstance();
+
         assertEquals(inst1.hashCode(),inst2.hashCode());
 
     }
