@@ -1,6 +1,5 @@
 package edu.umb.cs680.hw04;
 
-import edu.umb.cs680.hw04.Car;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
