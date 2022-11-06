@@ -1,9 +1,9 @@
 package edu.umb.cs680.hw06.PrintingFramework;
 
 
-import edu.umb.cs680.hw05.EncryptedString;
-import edu.umb.cs680.hw05.SecurityContext;
-import edu.umb.cs680.hw05.User;
+import edu.umb.cs680.hw06.EncryptedString;
+import edu.umb.cs680.hw06.SecurityContext;
+import edu.umb.cs680.hw06.User;
 
 public abstract class PrintJobExecutor {
 

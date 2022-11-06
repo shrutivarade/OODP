@@ -1,6 +1,6 @@
 package edu.umb.cs680.hw06.ModelABC;
 
-import edu.umb.cs680.hw05.*;
+import edu.umb.cs680.hw06.*;
 
 public class PrintJobExecutor extends edu.umb.cs680.hw06.PrintingFramework.PrintJobExecutor {
 
