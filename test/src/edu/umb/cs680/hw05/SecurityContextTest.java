@@ -24,4 +24,18 @@ class SecurityContextTest {
         assertNotEquals(ctx.getState() instanceof LoggedOut,ctx.getState() instanceof LoggedIn);
     }
 
+    @Test
+    public void checkLoginAfterLogout(){
+        ctx.logout();
+        ctx.login(pwd);
+        assertTrue(ctx.getState() instanceof LoggedIn);
+    }
+
+    @Test
+    public void checkLogoutAfterLogin(){
+        ctx.login(pwd);
+        ctx.logout();
+        assertTrue(ctx.getState() instanceof LoggedOut);
+    }
+
 }
