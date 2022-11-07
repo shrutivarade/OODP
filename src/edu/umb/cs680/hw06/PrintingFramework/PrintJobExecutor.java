@@ -8,10 +8,16 @@ import edu.umb.cs680.hw06.User;
 public abstract class PrintJobExecutor {
 
     public void execute(Printjob job, EncryptedString pwd, SecurityContext ctx){
-        doAuthentication(pwd, ctx);
-        doAccessControl();
-        doPrint();
-        doErrorHandling();
+
+        try{
+            doAccessControl();
+            doAuthentication(pwd, ctx);
+            doPrint();
+        }
+        catch (Exception e){
+            doErrorHandling();
+            throw e;
+        }
     }
 
     protected void doAuthentication(EncryptedString pwd, SecurityContext ctx){

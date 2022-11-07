@@ -6,14 +6,6 @@ public class PrintJobExecutor extends edu.umb.cs680.hw06.PrintingFramework.Print
 
     User user;
     SecurityContext ctx = new SecurityContext(user);
-    @Override
-    protected void doAuthentication(EncryptedString pwd, SecurityContext ctx) {
-        if(Authenticator.authenticate(ctx,pwd)){
-            ctx.login(pwd);
-        }
-
-        super.doAuthentication(pwd, ctx);
-    }
 
     @Override
     protected void doAccessControl() {
@@ -21,16 +13,31 @@ public class PrintJobExecutor extends edu.umb.cs680.hw06.PrintingFramework.Print
     }
 
     @Override
+    protected void doAuthentication(EncryptedString pwd, SecurityContext ctx) {
+        super.doAuthentication(pwd, ctx);
+        try{
+            if(Authenticator.authenticate(ctx,pwd)){
+                ctx.login(pwd);
+            }
+            else {
+                throw new RuntimeException("Authentication failed in ModelABC");
+            }
+        }
+        catch(Exception e){
+            throw e;
+        }
+    }
+
+    @Override
     protected void doPrint() {
         super.doPrint();
         if((ctx.getState() instanceof LoggedIn))
             System.out.println("Print Successful with authentication");
-        else
-            System.out.println("Authentication Failed");
     }
 
     @Override
     protected void doErrorHandling() {
         super.doErrorHandling();
+        System.out.println("Authentication failed in doErrHandling");
     }
 }

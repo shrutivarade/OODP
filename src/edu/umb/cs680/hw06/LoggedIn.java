@@ -24,13 +24,11 @@ public class LoggedIn implements State {
         if(!ctx.isActive()){
             ctx.changeState(new LoggedOut(ctx));
             ctx.login(pwd);
-            System.out.println("State: LoggedIn, Function: login");
         }
     }
 
     public void logout(){
         ctx.changeState(new LoggedOut(ctx));
-        System.out.println("State: LoggedIn, Function: logout");
     }
 
 }

@@ -24,7 +24,7 @@ public class LoggedOut implements State {
     public void login(EncryptedString pwd){
         if(Authenticator.authenticate(ctx,pwd)){
             ctx.changeState(new LoggedIn(ctx));
-            System.out.println("State: Loggedout, Function: login");
+
         }
         else {
             System.out.println("Incorrect password");
@@ -32,6 +32,6 @@ public class LoggedOut implements State {
     }
 
     public void logout(){
-        System.out.println("State: Loggedout, Function: logout");
+
     }
 }
