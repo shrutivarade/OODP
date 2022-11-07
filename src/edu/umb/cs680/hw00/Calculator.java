@@ -1,6 +1,5 @@
 package edu.umb.cs680.hw00;
 
-
 public class Calculator {
 
     public float multiply(float x, float y){
