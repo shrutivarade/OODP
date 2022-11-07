@@ -15,6 +15,7 @@ public class PrintJobExecutor extends edu.umb.cs680.hw06.PrintingFramework.Print
     @Override
     protected void doAuthentication(EncryptedString pwd, SecurityContext ctx) {
         super.doAuthentication(pwd, ctx);
+
         try{
             if(Authenticator.authenticate(ctx,null)){
                 ctx.login(pwd);
