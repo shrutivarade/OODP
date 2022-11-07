@@ -3,6 +3,8 @@ package edu.umb.cs680.hw06.PrintingFramework;
 import edu.umb.cs680.hw06.*;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrintJobExecutorTest {
@@ -11,25 +13,22 @@ class PrintJobExecutorTest {
     PrintJobExecutor abc = new edu.umb.cs680.hw06.ModelABC.PrintJobExecutor();
 
     User user;
-    SecurityContext ctx = new SecurityContext(user);
-    EncryptedString pwd;
 
+    EncryptedString pwd;
+    PrintJob job;
 
     @Test
     public void checkabc(){
-        abc.execute(null,null,ctx);
+        SecurityContext ctx = new SecurityContext(user);
+        abc.execute(job,null,ctx);
         assertTrue(ctx.getState() instanceof LoggedIn);
     }
 
     @Test
     public void checkexception(){
+        SecurityContext ctx = new SecurityContext(user);
         try{
-            if(!Authenticator.authenticate(ctx,pwd)){
-                ctx.login(pwd);
-            }
-            else {
-                throw new RuntimeException("Authentication failed in test file");
-            }
+            abc.doAuthentication(pwd,ctx);
         }
         catch(Exception e){
             throw e;
