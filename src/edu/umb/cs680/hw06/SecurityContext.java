@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class SecurityContext {
 
+
     private static State state;
     LinkedList<LocalDateTime> datetime = new LinkedList<LocalDateTime>();
     LocalDateTime local = LocalDateTime.now();

@@ -5,7 +5,6 @@ import edu.umb.cs680.hw06.SecurityContext;
 
 public class PrintJobExecutor extends edu.umb.cs680.hw06.PrintingFramework.PrintJobExecutor {
 
-
     @Override
     protected void doAccessControl() {
         super.doAccessControl();

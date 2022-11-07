@@ -37,6 +37,7 @@ public abstract class PrintJobExecutor {
 
     }
 
+
     public static void main(String[] args) {
 
         PrintJobExecutor xyz = new edu.umb.cs680.hw06.ModelXYZ.PrintJobExecutor();

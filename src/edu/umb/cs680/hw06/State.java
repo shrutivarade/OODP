@@ -5,4 +5,5 @@ public interface State {
     public void login(EncryptedString pwd);
     public void logout();
 
+
 }

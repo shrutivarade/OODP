@@ -13,7 +13,6 @@ class PrintJobExecutorTest {
     PrintJobExecutor abc = new edu.umb.cs680.hw06.ModelABC.PrintJobExecutor();
 
     User user;
-
     EncryptedString pwd;
     PrintJob job;
 

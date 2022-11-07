@@ -10,6 +10,7 @@ public class LoggedIn implements State {
         this.ctx = ctx;
     }
 
+
     public static LoggedIn getInstance(SecurityContext ctx) {
         if(instance == null)
             instance = new LoggedIn(ctx);

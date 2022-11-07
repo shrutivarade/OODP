@@ -5,6 +5,7 @@ public class LoggedOut implements State {
     SecurityContext ctx;
     EncryptedString pwd;
 
+
     private static LoggedOut instance = null;
 
     LoggedOut(SecurityContext ctx) {
