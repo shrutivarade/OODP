@@ -13,27 +13,27 @@ class StockEventTest {
 
 
     @Test
-    public void STOCKTest() {
+    public void STOCKTestwithoutLE() {
         obs.addObserver(LCO);
         obs.addObserver(TCO);
         obs.addObserver(TDO);
-
-        obs.changeQuote("hji", 80.0);
-
+        obs.changeQuote("xyz", 80.0);
         obs.removeObserver(LCO);
         obs.removeObserver(TCO);
         obs.removeObserver(TDO);
     }
 
-    /*Observer quoteUpdateLineChart = (Observable<StockEvent> sender, StockEvent event) -> {
-        System.out.println("StockEvent LineChart Updated");
-    };
-    Observer quoteUpdateTableChart = (Observable<StockEvent> sender, StockEvent event) -> {
-        System.out.println("StockEvent TableChart Updated");
-    };
-    Observer quoteUpdateThreeDChart = (Observable<StockEvent> sender, StockEvent event) -> {
-        System.out.println("StockEvent ThreeDChart Updated");
-    };*/
+    @Test
+    public void STOCKTestwithLE() {
+        obs.addObserver((sender, event) -> System.out.println("StockEvent LineChart Updated"));
+        obs.addObserver((sender, event) -> System.out.println("StockEvent TableChart Updated"));
+        obs.addObserver((sender, event) -> System.out.println("StockEvent ThreeDChart Updated"));
+        obs.changeQuote("PQR", 60.0);
+        obs.removeObserver((sender, event) -> System.out.println("StockEvent LineChart Updated"));
+        obs.removeObserver((sender, event) -> System.out.println("StockEvent TableChart Updated"));
+        obs.removeObserver((sender, event) -> System.out.println("StockEvent ThreeDChart Updated"));
+    }
+
 
 
 }
